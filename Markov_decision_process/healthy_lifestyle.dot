@@ -1,0 +1,34 @@
+digraph G {
+	rankdir=LR;
+	node [shape = ellipse, color = "red", height=1, width=1.5, fontsize="20pt"]; 
+    Healthy;
+    Sick;
+    Dead;
+    Terminal;
+    node [shape = point, style = filled, color = black, label = "", height = 0.1, fontsize="15pt"];
+    health_check[xlabel = "check"];
+    no_health_check[xlabel = "no check"];
+    take_med[xlabel = "medicine"];
+    no_med[xlabel = "no medicine"];
+    exit[xlabel = "exit"];
+    
+    Healthy -> health_check;
+    health_check -> Healthy [label="0.8; 1"]
+    health_check -> Sick [label="0.2; 0"]
+
+    Healthy -> no_health_check;
+    no_health_check -> Healthy [label="0.5; 0"]
+    no_health_check -> Sick [label="0.5; 0"]
+
+    Sick -> take_med;
+    take_med -> Healthy [label="0.9; 0"]
+    take_med -> Dead [label="0.1; 0"]
+
+    Sick -> no_med;
+    no_med -> Dead [label="0.8; 0"]
+    no_med -> Sick [label="0.2; 0"]
+
+    Dead -> exit;
+    exit -> Terminal [label="1; -100"]
+}
+

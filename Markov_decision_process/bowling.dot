@@ -1,0 +1,76 @@
+digraph G1 {
+	rankdir=LR;
+	node [shape = ellipse, color = "red", height=1, width=1, fontsize="20pt"]; 
+    UUU;
+    DUU;
+    UDU;
+    UUD;
+    DDU;
+    UDD;
+    DUD;
+    DDD:
+    Terminal;
+
+    node [shape = point, style = filled, color = black, label = "", height = 0.1, fontsize="15pt"];
+    m[xlabel = "middle"];
+    
+    UUU -> m;
+    m -> DUU[xlabel = "p1, r1"];
+    m -> UDU[xlabel = "p2, r2"];
+    m -> UUD[xlabel = "p3, r3"];
+    m -> DDU[xlabel = "p4, r4"];
+    m -> UDD[xlabel = "p5, r6"];
+    m -> DUD[xlabel = "p7, r7"];
+    m -> DDD[xlabel = "p8, r8"];
+}
+digraph G2 {
+	rankdir=LR;
+	node [shape = ellipse, color = "red", height=1, width=1, fontsize="20pt"]; 
+    UUU;
+    DUU;
+    UDU;
+    UUD;
+    DDU;
+    UDD;
+    DUD;
+    DDD:
+    Terminal;
+
+    node [shape = point, style = filled, color = black, label = "", height = 0.1, fontsize="15pt"];
+    l[xlabel = "left"];
+
+    UUU -> l;
+    l -> DUU[xlabel = "p1, r1"];
+    l -> UDU[xlabel = "p2, r2"];
+    l -> UUD[xlabel = "p3, r3"];
+    l -> DDU[xlabel = "p4, r4"];
+    l -> UDD[xlabel = "p5, r6"];
+    l -> DUD[xlabel = "p7, r7"];
+    l -> DDD[xlabel = "p8, r8"];
+}
+
+digraph G3 {
+	rankdir=LR;
+	node [shape = ellipse, color = "red", height=1, width=1, fontsize="20pt"]; 
+    UUU;
+    DUU;
+    UDU;
+    UUD;
+    DDU;
+    UDD;
+    DUD;
+    DDD:
+    Terminal;
+
+    node [shape = point, style = filled, color = black, label = "", height = 0.1, fontsize="15pt"];
+    r[xlabel = "right"];
+
+    UUU -> r;
+    r -> DUU[xlabel = "p1, r1"];
+    r -> UDU[xlabel = "p2, r2"];
+    r -> UUD[xlabel = "p3, r3"];
+    r -> DDU[xlabel = "p4, r4"];
+    r -> UDD[xlabel = "p5, r6"];
+    r -> DUD[xlabel = "p7, r7"];
+    r -> DDD[xlabel = "p8, r8"];
+}
